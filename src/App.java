@@ -7,5 +7,12 @@ public class App {
         customWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         customWindow.setTitle("Shape Viewer");
         customWindow.setVisible(true);
+
+        ShapesManager shapesManager = new ShapesManager();
+        shapesManager.addShape();
+        shapesManager.setDisplayName(false);
+
+
+
     }
 }
