@@ -6,6 +6,7 @@ public class ShapesManager extends JPanel { //i think this is the custom panel -
     private ArrayList<Shapes> shapesList = new ArrayList<>();
     private Circle c;
     private Rectangle r;
+    private Square sq;
     //going through the list, for each shape in Shapes invoke its drawShape method
 
     //if setDisplayName id true invoke drawName method
@@ -18,11 +19,15 @@ public class ShapesManager extends JPanel { //i think this is the custom panel -
         c.drawShape(g);
         c.drawName(g);
 
-        r = new Rectangle(70, 100);
+        r = new Rectangle(Rectangle.height, Rectangle.width);
         Rectangle r = this.r;
         r.drawShape(g);
         r.drawName(g);
 
+        sq=new Square(Square.wh, Square.wh);
+        Square sq = this.sq;
+        sq.drawShape(g);
+        sq.drawName(g);
     }
 
 }

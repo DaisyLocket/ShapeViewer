@@ -4,8 +4,8 @@ public class Rectangle extends Shapes{
 
     //WILL BE MOVABLE
 
-    public static int height = 20;
-    public static int width = 40;
+    public static int height = 70;
+    public static int width = 130;
 
     public Rectangle (int height, int width) {
         Rectangle.height =height;
