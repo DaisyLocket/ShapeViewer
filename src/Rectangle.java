@@ -4,18 +4,20 @@ public class Rectangle extends Shapes{
 
     //WILL BE MOVABLE
 
-    public static int height = 30;
-    public static int width = 45;
+    public static int height = 20;
+    public static int width = 40;
 
     public Rectangle (int height, int width) {
-
+        Rectangle.height =height;
+        Rectangle.width = width;
     }
         public void drawShape (Graphics g){
             g.setColor(Color.blue);
-            int height = this.height;
-            int width = this.width;
             g.drawRect(70, 90, Rectangle.width, Rectangle.height);
         }
+    public void drawName(Graphics g){
+        g.drawString("Rectangle",70,90 );
+    }
 
 
 

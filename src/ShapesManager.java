@@ -16,10 +16,12 @@ public class ShapesManager extends JPanel { //i think this is the custom panel -
         c = new Circle(Color.red, 100, 100, 100);
         Circle c = this.c;
         c.drawShape(g);
+        c.drawName(g);
 
-        r = new Rectangle(40, 50);
+        r = new Rectangle(70, 100);
         Rectangle r = this.r;
         r.drawShape(g);
+        r.drawName(g);
 
     }
 
