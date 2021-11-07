@@ -4,11 +4,14 @@ import java.awt.*;
 //creates the parameters for the display window
 public class CustomWindow extends JFrame {
 
-    private Shapes mainPanel;
+    private Graphics g;
+    private ShapesManager mainPanel;
+    private Circle circle;
 
     public CustomWindow()
     {
-        mainPanel = new Shapes();
+        mainPanel = new ShapesManager();
+        mainPanel.addShape(g);
 
         //add our new panel to the frame
         add(mainPanel, BorderLayout.CENTER);

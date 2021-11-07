@@ -4,14 +4,10 @@ import java.awt.*;
 //defines the parameters of the content of the shape viewer
 public class Shapes extends JPanel {
 
-    Color color; //The Color class is in java.awt
+    Color color;
     boolean filled;
     int xCenter, yCenter;
 
-    public void drawShape(Graphics g){};
-
-    //};
-   // Rectangle rectangle =new Rectangle();
 /*
     @Override
     //protected void paintComponent(Graphics g) {

@@ -3,30 +3,19 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class ShapesManager extends JPanel { //i think this is the custom panel -THIS STORES ALL THE SHAPES
-    private ArrayList<Shapes> shapes = new ArrayList<>();
-    //going through the list, for each shape in Shapes involke its drawshape method
+    private ArrayList<Shapes> shapesList = new ArrayList<>();
+    private Circle c;
+    //going through the list, for each shape in Shapes invoke its drawShape method
 
-    //if setDisplayName id true involke drawname method
+    //if setDisplayName id true invoke drawName method
 
-    public boolean setDisplayName;
-    Circle circle = new Circle();
+    //public boolean setDisplayName;
 
-    public void setDisplayName(boolean b) {
-    }
 
     public void addShape(Graphics g) {
-        Circle circle = this.circle;
-        circle.drawShape(g);
-    }
-
-    public void drawShapes(Graphics g) {
-
-
-        //add shapes
-
-        //create jframe/window at the bottom pass to our manager
-        //create panel(mgr)
-        //
+        c = new Circle(Color.red,100,100,50);
+        Circle c = this.c;
+        c.drawShape(g);
     }
 }
 

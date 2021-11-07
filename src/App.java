@@ -9,8 +9,7 @@ public class App {
         customWindow.setVisible(true);
 
         ShapesManager shapesManager = new ShapesManager();
-        shapesManager.addShape();
-        shapesManager.setDisplayName(false);
+        //shapesManager.setDisplayName(false);
 
 
 
