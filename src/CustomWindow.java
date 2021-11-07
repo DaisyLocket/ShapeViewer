@@ -11,7 +11,6 @@ public class CustomWindow extends JFrame {
     public CustomWindow()
     {
         mainPanel = new ShapesManager();
-        mainPanel.addShape(g);
 
         //add our new panel to the frame
         add(mainPanel, BorderLayout.CENTER);
