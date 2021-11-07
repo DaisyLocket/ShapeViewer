@@ -1,5 +1,8 @@
 public interface Moveable {
 
+    public static void moveRect() {
+
+    }
     /*public boolean rightClick(){
         moveTenUnits();
         return true;

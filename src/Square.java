@@ -9,19 +9,18 @@ public class Square extends Shapes{
     public static int y = 190;
 
     public Square (int height, int width) {
-        Square.height =height;
-        Square.width = width;
+       this.height = height;
+       this.width = width;
     }
     public void drawShape (Graphics g){
-        g.setColor(Color.green);
+        g.setColor(Color.orange);
         g.drawRect(x, y, Square.width, Square.height);
     }
     public void fillShape(Graphics g){
-        g.setColor(Color.green);
+        g.setColor(Color.orange);
         g.fillRect(x, y, Square.width, Square.height);
     }
     public void drawName(Graphics g){
-        g.drawString("Square",100,190 );
+        g.drawString("Square",x,y );
     }
-
 }

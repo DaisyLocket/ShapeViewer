@@ -1,20 +1,30 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 //defines the parameters of the content of the shape viewer
 public abstract class Shapes extends JPanel {
     Color color;
-    boolean filled;
+    static boolean filled;
     int xCenter, yCenter;
-
-    public Shapes(){
-
-    }
+    private Shapes Circle;
+    private Shapes Rectangle;
+    private Shapes Square;
 
     public abstract void drawShape(Graphics g);
 
     public abstract void fillShape(Graphics g);
-/*
+
+    public abstract void drawName(Graphics g);
+
+    public ArrayList<Shapes> shapesList;
+    public void setShapesList(ArrayList<Shapes> shapesList) {
+        this.shapesList = shapesList;
+        shapesList.add(Circle);
+        shapesList.add(Rectangle);
+        shapesList.add(Square);
+    }
+        /*
     @Override
     //protected void paintComponent(Graphics g) {
         //The superclass does some important work in the method we've overridden, so we
