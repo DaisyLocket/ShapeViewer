@@ -1,15 +1,22 @@
 import java.awt.*;
 
 public class Circle extends Shapes{
+    private int radius = 30;
 
-    Shapes shapes = new Shapes();
     public Circle (Color color, int xCentre, int yCentre, int radius){
     }
     public void drawShape(Graphics g) {
         g.setColor(Color.red);
-        int circleRadius = 30;
-        g.drawOval(250,250,circleRadius * 2,circleRadius * 2);
+        g.drawOval(250,250,radius * 2,radius * 2);
     }
+
+    @Override
+    public void fillShape(Graphics g) {
+        g.setColor(Color.red);
+        g.fillOval(250,250,radius * 2,radius * 2);
+
+    }
+
     public void drawName(Graphics g){
         g.drawString("Circle",250,250 );
     }

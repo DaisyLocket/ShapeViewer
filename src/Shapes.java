@@ -2,13 +2,18 @@ import javax.swing.*;
 import java.awt.*;
 
 //defines the parameters of the content of the shape viewer
-public class Shapes extends JPanel {
-
+public abstract class Shapes extends JPanel {
     Color color;
     boolean filled;
     int xCenter, yCenter;
 
+    public Shapes(){
 
+    }
+
+    public abstract void drawShape(Graphics g);
+
+    public abstract void fillShape(Graphics g);
 /*
     @Override
     //protected void paintComponent(Graphics g) {

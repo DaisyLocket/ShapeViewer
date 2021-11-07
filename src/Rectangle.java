@@ -15,6 +15,13 @@ public class Rectangle extends Shapes{
             g.setColor(Color.blue);
             g.drawRect(70, 90, Rectangle.width, Rectangle.height);
         }
+
+    @Override
+    public void fillShape(Graphics g) {
+        g.setColor(Color.blue);
+        g.fillRect(70, 90, Rectangle.width, Rectangle.height);
+    }
+
     public void drawName(Graphics g){
         g.drawString("Rectangle",70,90 );
     }
