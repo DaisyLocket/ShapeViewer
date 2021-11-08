@@ -1,13 +1,14 @@
 import java.awt.*;
 
-public class Rectangle extends Shapes implements Moveable{
+public class Rectangle extends Square implements Moveable{
 
     //WILL BE MOVABLE
 
-    public static int height = 70;
-    public static int width = 130;
-    public static int xCenter = 70;
-    public static int yCenter = 90;
+    protected static int height = 70;
+    protected static int width = 130;
+    protected static int xCenter = 70;
+    protected static int yCenter = 90;
+    protected boolean filled;
 
     public Rectangle (int height, int width) {
         Rectangle.height =height;

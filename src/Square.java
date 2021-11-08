@@ -1,17 +1,21 @@
 import java.awt.*;
 
-public class Square extends Shapes{
+public class Square extends Shape {
 
-    public static int wh = 60;
-    public static int height = wh;
-    public static int width = wh;
-    public static int x = 100;
-    public static int y = 190;
+    protected static int wh = 60;
+    protected static int height = wh;
+    protected static int width = wh;
+    protected static int x = 100;
+    protected static int y = 190;
 
     public Square (int height, int width) {
        this.height = height;
        this.width = width;
     }
+
+    public Square() {
+    }
+
     public void drawShape (Graphics g){
         g.setColor(Color.orange);
         g.drawRect(x, y, Square.width, Square.height);

@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Circle extends Shapes{
+public class Circle extends Shape {
     private int radius;
 
     public Circle (Color color, int xCentre, int yCentre, int radius){

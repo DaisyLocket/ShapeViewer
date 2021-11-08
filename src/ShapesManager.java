@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 //Stores all the shapes and calls them
 public class ShapesManager extends JPanel {
-    public ArrayList<Shapes> shapesList;
+    public ArrayList<Shape> shapeList;
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -14,24 +14,31 @@ public class ShapesManager extends JPanel {
         r = new Rectangle(r.height, r.width);
         sq = new Square(sq.height, sq.width);
 
-        shapesList = new ArrayList<>();
-        shapesList.add(c);
-        shapesList.add(r);
-        shapesList.add(sq);
+        shapeList = new ArrayList<>();
+        shapeList.add(c);
+        shapeList.add(r);
+        shapeList.add(sq);
 
-        for (Shapes shapes : shapesList){
-            shapes.drawShape(g);
+        for (Shape shape : shapeList){
+            shape.drawShape(g);
         }
 
-        if(setDisplayName){
-            c.drawName(g);
-            r.drawName(g);
-            sq.drawName(g);
+        for (Shape shape : shapeList){
+            if(setDisplayName) {
+            shape.drawName(g);
+            }
+        }
+
+        if(filled){
+            c.fillShape(g);
+            r.fillShape(g);
+            sq.fillShape(g);
         }
         }
 
     private Square sq;
     private Rectangle r;
-    public Circle c;
+    private Circle c;
     boolean setDisplayName = true;
+    boolean filled = false;
 }
