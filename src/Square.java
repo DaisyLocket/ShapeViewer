@@ -21,6 +21,7 @@ public class Square extends Shapes{
         g.fillRect(x, y, Square.width, Square.height);
     }
     public void drawName(Graphics g){
+        g.setColor(Color.black);
         g.drawString("Square",x,y );
     }
 }

@@ -28,6 +28,7 @@ public class Rectangle extends Shapes implements Moveable{
         g.fillRect(xCenter, yCenter, Rectangle.width, Rectangle.height);
     }
     public void drawName(Graphics g){
+        g.setColor(Color.black);
         g.drawString("Rectangle", xCenter,yCenter );
     }
 
