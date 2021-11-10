@@ -1,13 +1,13 @@
 import java.awt.*;
 
 public class Circle extends Shape {
-    private int radius;
+    private int radius = 40;
 
-    public Circle (Color color, int xCentre, int yCentre, int radius){
+    public Circle (Color color, int xCentre, int yCentre){
         this.color = color;
         this.xCenter = xCentre;
         this.yCenter = yCentre;
-        this.radius = radius;
+
     }
     public void drawShape(Graphics g) {
         g.setColor(Color.red);

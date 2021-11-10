@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 //Stores all the shapes and calls them
 public class ShapesManager extends JPanel {
-    public ArrayList<Shape> shapeList;
+
+    private ArrayList<Shape> shapeList;
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        c = new Circle(Color.red, 100, 100, 50);
+        c = new Circle(Color.red, 100, 100);
         r = new Rectangle(r.height, r.width);
         sq = new Square(sq.height, sq.width);
 
@@ -35,7 +36,6 @@ public class ShapesManager extends JPanel {
             sq.fillShape(g);
         }
         }
-
     private Square sq;
     private Rectangle r;
     private Circle c;
