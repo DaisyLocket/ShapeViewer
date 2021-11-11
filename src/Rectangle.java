@@ -33,4 +33,9 @@ public class Rectangle extends Square implements Moveable{
         g.drawString("Rectangle", xCenter,yCenter );
     }
 
+    @Override
+    public void boundingBox() {
+
+    }
+
 }

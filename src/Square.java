@@ -9,8 +9,8 @@ public class Square extends Shape {
     protected static int y = 190;
 
     public Square (int height, int width) {
-       this.height = height;
-       this.width = width;
+       Square.height = height;
+       Square.width = width;
     }
 
     public Square() {
@@ -27,5 +27,10 @@ public class Square extends Shape {
     public void drawName(Graphics g){
         g.setColor(Color.black);
         g.drawString("Square",x,y );
+    }
+
+    @Override
+    public void boundingBox() {
+
     }
 }

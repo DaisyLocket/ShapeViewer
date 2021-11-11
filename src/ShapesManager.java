@@ -6,39 +6,41 @@ import java.util.ArrayList;
 public class ShapesManager extends JPanel {
 
     private ArrayList<Shape> shapeList;
+    private Square sq;
+    private Rectangle r;
+    private Circle c;
+    private Quadrilateral quad;
+    boolean setDisplayName = true;
+    boolean filled = false;
+    private Shape shape;
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
         c = new Circle(Color.red, 100, 100);
-        r = new Rectangle(r.height, r.width);
-        sq = new Square(sq.height, sq.width);
+        r = new Rectangle(Rectangle.height, Rectangle.width);
+        sq = new Square(Square.height, Square.width);
+        //quad = new Quadrilateral(Point, )
 
         shapeList = new ArrayList<>();
         shapeList.add(c);
         shapeList.add(r);
         shapeList.add(sq);
+        //shapeList.add(quad);
 
-        for (Shape shape : shapeList){
+        for (Shape shape : shapeList) {
             shape.drawShape(g);
         }
 
-        for (Shape shape : shapeList){
-            if(setDisplayName) {
-            shape.drawName(g);
+        for (Shape shape : shapeList) {
+            if (setDisplayName) {
+                shape.drawName(g);
+            }
+
+            if (filled) {
+                shape.drawName(g);
             }
         }
-
-        if(filled){
-            c.fillShape(g);
-            r.fillShape(g);
-            sq.fillShape(g);
-        }
-        }
-    private Square sq;
-    private Rectangle r;
-    private Circle c;
-    boolean setDisplayName = true;
-    boolean filled = false;
+    }
 }
