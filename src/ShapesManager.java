@@ -21,13 +21,13 @@ public class ShapesManager extends JPanel {
         c = new Circle(Color.red, 100, 100);
         r = new Rectangle(Rectangle.height, Rectangle.width);
         sq = new Square(Square.height, Square.width);
-        //quad = new Quadrilateral(Point, )
+        quad = new Quadrilateral();
 
         shapeList = new ArrayList<>();
         shapeList.add(c);
         shapeList.add(r);
         shapeList.add(sq);
-        //shapeList.add(quad);
+        shapeList.add(quad);
 
         for (Shape shape : shapeList) {
             shape.drawShape(g);
@@ -42,5 +42,6 @@ public class ShapesManager extends JPanel {
                 shape.drawName(g);
             }
         }
+        System.out.println();
     }
 }

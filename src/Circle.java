@@ -11,7 +11,7 @@ public class Circle extends Shape {
     }
     public void drawShape(Graphics g) {
         g.setColor(Color.red);
-        g.drawOval(250,250,radius * 2,radius * 2);
+        g.drawOval(250, 250,radius * 2,radius * 2);
     }
 
     @Override
@@ -23,6 +23,11 @@ public class Circle extends Shape {
     public void drawName(Graphics g){
         g.setColor(Color.black);
         g.drawString("Circle",250,250 );
+    }
+
+    @Override
+    public void boundingBox() {
+
     }
 
 }

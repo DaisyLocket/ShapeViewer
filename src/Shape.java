@@ -17,9 +17,6 @@ public abstract class Shape {
         this.filled = filled;
     }
 
-    public Shape(Point centerPoint) {
-    }
-
     public abstract void drawShape(Graphics g);
 
     public abstract void fillShape(Graphics g);
