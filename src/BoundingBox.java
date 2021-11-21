@@ -1,4 +1,4 @@
-import java.awt.*;
+
 
 public class BoundingBox {
     private Point bottomLeft;
@@ -8,10 +8,12 @@ public class BoundingBox {
         this.bottomLeft = bottomLeft;
         this.topRight = topRight;
     }
-    public Point getBottomLeft() {
-        return bottomLeft;
-    }
-    public Point getTopRight(){
-        return topRight;
+
+    @Override
+    public String toString() {
+        return "BoundingBox{" +
+                "bottomLeft=" + bottomLeft +
+                ", topRight=" + topRight +
+                '}';
     }
 }

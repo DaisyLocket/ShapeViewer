@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 //Stores all the shapes and calls them
@@ -11,22 +12,23 @@ public class ShapesManager extends JPanel {
     private Circle c;
     private Quadrilateral quad;
     boolean setDisplayName = true;
-    boolean filled = false;
+    boolean filled = Shape.filled;
+    boolean drawBoundingBox = true;
     private Shape shape;
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        c = new Circle(Color.red, 100, 100);
-        r = new Rectangle(Rectangle.height, Rectangle.width);
+        c = new Circle(Color.red,Circle.width, Circle.height);
         sq = new Square(Square.height, Square.width);
-        quad = new Quadrilateral();
+        r = new Rectangle(Rectangle.height, Rectangle.width);
+        quad = new Quadrilateral(Quadrilateral.xPoly, Quadrilateral.yPoly, Quadrilateral.numOfPoints);
 
         shapeList = new ArrayList<>();
         shapeList.add(c);
-        shapeList.add(r);
         shapeList.add(sq);
+        shapeList.add(r);
         shapeList.add(quad);
 
         for (Shape shape : shapeList) {
@@ -37,11 +39,13 @@ public class ShapesManager extends JPanel {
             if (setDisplayName) {
                 shape.drawName(g);
             }
-
-            if (filled) {
-                shape.drawName(g);
-            }
         }
-        System.out.println();
+        for (Shape shape : shapeList){
+            if(drawBoundingBox)
+            shape.boundingBox(g);
+        }
+
     }
+
+
 }

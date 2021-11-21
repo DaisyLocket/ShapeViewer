@@ -1,33 +1,51 @@
 import java.awt.*;
+import java.awt.event.MouseEvent;
 
 public class Circle extends Shape {
-    private int radius = 40;
+    private static int radius = 40;
+    protected static int width = radius * 2;
+    protected static int height = radius * 2;
+    protected int x = 350;
+    protected int y = 250;
 
-    public Circle (Color color, int xCentre, int yCentre){
+    protected int bottomLeftX = x;
+    protected int bottomLeftY = y + (radius * 2);
+    protected int topRightX = x + (radius * 2);
+    protected int topRightY = y;
+    public BoundingBox boundingBox;
+
+    public Circle (Color color, int width, int height){
         this.color = color;
-        this.xCenter = xCentre;
-        this.yCenter = yCentre;
+        this.width = radius * 2;
+        this.height = radius * 2;
+
+        this.boundingBox = new BoundingBox(new Point(bottomLeftX, bottomLeftY),new Point (topRightX, topRightY));
 
     }
     public void drawShape(Graphics g) {
         g.setColor(Color.red);
-        g.drawOval(250, 250,radius * 2,radius * 2);
+
+        if(filled)
+            g.fillOval(x,y,radius * 2,radius * 2);
+        else
+            g.drawOval(x, y,radius * 2,radius * 2);
     }
 
-    @Override
-    public void fillShape(Graphics g) {
-        g.setColor(Color.red);
-        g.fillOval(250,250,radius * 2,radius * 2);
-    }
 
     public void drawName(Graphics g){
         g.setColor(Color.black);
-        g.drawString("Circle",250,250 );
+        g.drawString("Circle",x,y );
     }
 
     @Override
-    public void boundingBox() {
-
+    public void boundingBox(Graphics g) {
+        g.setColor(Color.black);
+        g.drawRect(bottomLeftX, topRightY, (topRightX - bottomLeftX), (bottomLeftY - topRightY));
     }
+
+    /*@Override
+    public void mouseClick(MouseEvent e) {
+
+    }*/
 
 }
