@@ -1,3 +1,6 @@
+/**
+ * Consts set the window size to display the panel
+ */
 public final class Consts {
 // the size of the shape viewer when it opens
     public static final int FRAME_WIDTH = 800;

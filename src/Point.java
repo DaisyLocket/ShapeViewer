@@ -1,3 +1,6 @@
+/**
+ * The Points that are used to create the bounding boxes
+ */
 public class Point {
     private int x;
     private int y;

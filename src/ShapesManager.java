@@ -4,10 +4,15 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
+/**
+ * All shapes are created in the Shape Manager
+ * The display name can be set to true or false from here
+ * The bounding box and also be set to show or not, using the drawBoundingBox boolean
+ */
 //Stores all the shapes and calls them
 public class ShapesManager extends JPanel {
 
-    protected ArrayList<Shape> shapeList = new ArrayList<>();;
+    protected ArrayList<Shape> shapeList = new ArrayList<>();
     protected Square sq;
     protected Rectangle r;
     protected Circle c;
@@ -38,20 +43,33 @@ public class ShapesManager extends JPanel {
         shapeList.add(quad);
         //shapeList.add(quad2);
 
+        /**
+         * Each shape is drawn to the panel on the window
+         * Each shape is set as shows its outline or a filled shape depending on its 'filled' status in its method
+         */
         for (Shape shape : shapeList) {
             shape.drawShape(g);
         }
 
+        /**
+         * If the setDisplayName boolean is true the shape name is displayed at each shape
+         */
         for (Shape shape : shapeList) {
             if (setDisplayName) {
                 shape.drawName(g);
             }
         }
+        /**
+         * If the drawBoundingBox boolean is true then the bounding box is displayed
+         */
         for (Shape shape : shapeList){
             if(drawBoundingBox)
             shape.boundingBox(g);
         }
 
+        /**
+         * When the mouse is clicked on the panel the rectangle and square shapes move 10 pixels along the x-axis
+         */
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {

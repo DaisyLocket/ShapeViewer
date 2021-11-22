@@ -1,5 +1,9 @@
 import java.awt.*;
-import java.awt.event.MouseEvent;
+
+/**
+ * The square method is a subclass of Shape and a superclass of Rectangle
+ * For an unknown reason the shape displays as a rectangle and the bounding box displays as a square
+ */
 
 public class Square extends Shape {
 

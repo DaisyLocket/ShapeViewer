@@ -1,7 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
 
-//creates the panel to display the shapes in the window
+/**
+ * creates the panel to display the shapes in the window
+ */
+
 public class CustomWindow extends JFrame {
 
     private ShapesManager mainPanel;

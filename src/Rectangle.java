@@ -1,9 +1,12 @@
 import java.awt.*;
-import java.awt.event.MouseEvent;
+
+/**
+ * The rectangle is a subclass of Square, which extends Shape, and should implement Moveable but the moveable code is in the rectangle class
+ * If I was confident enough to move it without breaking everything, I would
+ *
+ */
 
 public class Rectangle extends Square implements Moveable{
-
-    //WILL BE MOVABLE
 
     protected static int height = 70;
     protected static int width = 130;
@@ -51,6 +54,7 @@ public class Rectangle extends Square implements Moveable{
     }
 
     public void moveShape(){
+
         xRec = Rectangle.xRec +10;
     }
 

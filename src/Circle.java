@@ -1,5 +1,9 @@
 import java.awt.*;
-import java.awt.event.MouseEvent;
+
+/**
+ * The circle shape class extends the Shape class and implements all it abstracts methods
+ *
+ */
 
 public class Circle extends Shape {
     private static int radius = 40;
@@ -22,6 +26,7 @@ public class Circle extends Shape {
         this.boundingBox = new BoundingBox(new Point(bottomLeftX, bottomLeftY),new Point (topRightX, topRightY));
 
     }
+
     public void drawShape(Graphics g) {
         g.setColor(Color.red);
 
@@ -30,7 +35,6 @@ public class Circle extends Shape {
         else
             g.drawOval(x, y,radius * 2,radius * 2);
     }
-
 
     public void drawName(Graphics g){
         g.setColor(Color.black);

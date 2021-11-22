@@ -1,7 +1,10 @@
 import java.awt.*;
-import java.awt.event.MouseEvent;
 import java.util.Arrays;
 
+/**
+ * The coordinates in xPoly and yPoly link up to create points that are used to show a quadrilateral
+ * This is done using 4 points of a polygon
+ */
 public class Quadrilateral extends Shape implements Rotatable {
 
     protected static int[] xPoly = {180, 250, 325, 375};

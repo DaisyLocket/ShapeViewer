@@ -1,8 +1,9 @@
 import java.awt.*;
-import java.awt.event.MouseEvent;
 
-//defines the parameters of the content of the shape viewer
-//abstract class Shapes
+/**
+ * Shape is an abstract super class
+ */
+
 public abstract class Shape {
     protected Color color;
     protected boolean filled;

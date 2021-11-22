@@ -1,16 +1,9 @@
-public interface Moveable {
+/**
+ * This is where the code to move the rectangle and square should be but I forgot it was here until just now
+ */
+interface Moveable {
 
     public static void moveRect() {
 
     }
-    /*public boolean rightClick(){
-        moveTenUnits();
-        return true;
-    }
-
-    public void moveTenUnits(){
-        xCenter = xCenter + 10;
-        boundBox.bottomLeft.x += 10;
-        boundBox.topRight.x += 10;*/
-    //}
 }

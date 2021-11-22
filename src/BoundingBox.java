@@ -1,5 +1,7 @@
-
-
+/**
+ * Bounding box class is implemented in each shape
+ * All bounding boxes have the same calculations based on the original points of the shape
+ */
 public class BoundingBox {
     private Point bottomLeft;
     private Point topRight;
