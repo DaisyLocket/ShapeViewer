@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.event.MouseEvent;
 
 public class Rectangle extends Square implements Moveable{
 
@@ -22,6 +23,10 @@ public class Rectangle extends Square implements Moveable{
         this.boundingBox = new BoundingBox(new Point(bottomLeftX, bottomLeftY),new Point (topRightX, topRightY));
     }
 
+    public Rectangle() {
+        super();
+    }
+
     public void drawShape (Graphics g){
         g.setColor(Color.blue);
 
@@ -41,19 +46,22 @@ public class Rectangle extends Square implements Moveable{
         g.drawRect(bottomLeftX, topRightY, (topRightX - bottomLeftX), (bottomLeftY - topRightY));
     }
 
-    /*public void mouseClicked(MouseEvent e) {
-        int height = Rectangle.height;
-        int width = Rectangle.width;
-        int xCenter = Rectangle.xCenter;
-        int yCenter = Rectangle.yCenter + 10;
+    public void mouseClick() {
+        moveShape();
+    }
 
-    }*/
-
+    public void moveShape(){
+        xRec = Rectangle.xRec +10;
+    }
 
     @Override
     public String toString() {
         return "Rectangle{" +
-                "filled=" + filled +
+                "bottomLeftX=" + bottomLeftX +
+                ", bottomLeftY=" + bottomLeftY +
+                ", topRightX=" + topRightX +
+                ", topRightY=" + topRightY +
+                ", boundingBox=" + boundingBox +
                 '}';
     }
 }

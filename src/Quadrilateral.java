@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class Quadrilateral extends Shape implements Rotatable {
 
-    //private Point[] points;
     protected static int[] xPoly = {180, 250, 325, 375};
     protected static int[] yPoly = {150, 100, 125, 225};
     int xCenter = (((Arrays.stream(xPoly).max().getAsInt())-(Arrays.stream(xPoly).min().getAsInt()))/2)+(Arrays.stream(xPoly).min().getAsInt());
@@ -16,6 +15,7 @@ public class Quadrilateral extends Shape implements Rotatable {
     int topRightX = Arrays.stream(xPoly).max().getAsInt();
     int topRightY = Arrays.stream(yPoly).min().getAsInt();
     public BoundingBox boundingBox;
+    private Rectangle rectangle = new Rectangle();
 
 
     public Quadrilateral(int[] xPoly, int[] yPoly, int numOfPoints) {
@@ -26,11 +26,14 @@ public class Quadrilateral extends Shape implements Rotatable {
         this.boundingBox = new BoundingBox(new Point(bottomLeftX, bottomLeftY),new Point (topRightX, topRightY));
     }
 
-    public Quadrilateral (Rectangle rectangle){
+    /*public Quadrilateral(int x, int y,int i, int i1) {
+        rectangle.xRec = x;
+        rectangle.yRec= y;
+        rectangle.width = i;
+        rectangle.height = i1;
+    }*/
 
-    }
-
-        @Override
+    @Override
         public void drawShape (Graphics g){
             g.setColor(Color.CYAN);
 
@@ -62,6 +65,8 @@ public class Quadrilateral extends Shape implements Rotatable {
                 ", bottomLeftY=" + bottomLeftY +
                 ", topRightX=" + topRightX +
                 ", topRightY=" + topRightY +
+                ", boundingBox=" + boundingBox +
+                ", rectangle=" + rectangle +
                 '}';
     }
 }

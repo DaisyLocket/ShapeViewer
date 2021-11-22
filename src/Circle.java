@@ -16,8 +16,8 @@ public class Circle extends Shape {
 
     public Circle (Color color, int width, int height){
         this.color = color;
-        this.width = radius * 2;
-        this.height = radius * 2;
+        this.width = width;
+        this.height = height;
 
         this.boundingBox = new BoundingBox(new Point(bottomLeftX, bottomLeftY),new Point (topRightX, topRightY));
 
@@ -43,9 +43,16 @@ public class Circle extends Shape {
         g.drawRect(bottomLeftX, topRightY, (topRightX - bottomLeftX), (bottomLeftY - topRightY));
     }
 
-    /*@Override
-    public void mouseClick(MouseEvent e) {
-
-    }*/
-
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "x=" + x +
+                ", y=" + y +
+                ", bottomLeftX=" + bottomLeftX +
+                ", bottomLeftY=" + bottomLeftY +
+                ", topRightX=" + topRightX +
+                ", topRightY=" + topRightY +
+                ", boundingBox=" + boundingBox +
+                '}';
+    }
 }

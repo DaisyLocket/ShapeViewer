@@ -13,12 +13,17 @@ public class Square extends Shape {
     protected int topRightX = x + width;
     protected int topRightY = y;
     public BoundingBox boundingBox;
+    protected boolean filled = true;
 
     public Square (int height, int width) {
        Square.height = height;
        Square.width = width;
 
         this.boundingBox = new BoundingBox(new Point(bottomLeftX, bottomLeftY),new Point (topRightX, topRightY));
+    }
+
+    public Square() {
+
     }
 
     @Override
@@ -33,7 +38,7 @@ public class Square extends Shape {
     @Override
     public void drawName(Graphics g){
         g.setColor(Color.black);
-        g.drawString("Square",x,y );
+        g.drawString("Square(ish)",x,y );
     }
 
     public void boundingBox(Graphics g) {
@@ -42,14 +47,24 @@ public class Square extends Shape {
         g.drawRect(bottomLeftX, topRightY, (topRightX - bottomLeftX), (bottomLeftY - topRightY));
     }
 
-    /*@Override
-    public void mouseClick(MouseEvent e) {
 
-    }*/
+    public void mouseClick() {
+        moveShape();
+    }
+    public void moveShape(){
+        x = Square.x +10;
+
+    }
 
     @Override
     public String toString() {
-        return "Square{}";
+        return "Square{" +
+                "bottomLeftX=" + bottomLeftX +
+                ", bottomLeftY=" + bottomLeftY +
+                ", topRightX=" + topRightX +
+                ", topRightY=" + topRightY +
+                ", boundingBox=" + boundingBox +
+                ", filled=" + filled +
+                '}';
     }
-
 }

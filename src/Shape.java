@@ -5,25 +5,25 @@ import java.awt.event.MouseEvent;
 //abstract class Shapes
 public abstract class Shape {
     protected Color color;
-    protected static boolean filled;
-    protected int xCenter, yCenter;
+    protected boolean filled;
+    protected int x, y;
 
     Shape() {
         this(0, 0);
     }
 
-    Shape(int xCenter, int yCenter) {
-        this(Color.black, xCenter, yCenter);
+    Shape(int x, int y) {
+        this(Color.black, x, y);
     }
 
-    Shape(Color color, int xCenter, int yCenter) {
-        this(color, xCenter, yCenter, false);
+    Shape(Color color, int x, int y) {
+        this(color, x, y, false);
     }
 
-    Shape(Color color, int xCenter, int yCenter, boolean filled) {
+    Shape(Color color, int x, int y, boolean filled) {
         this.color = color;
-        this.xCenter = xCenter;
-        this.yCenter = yCenter;
+        this.x = x;
+        this.y = y;
         this.filled = filled;
     }
 
@@ -34,7 +34,5 @@ public abstract class Shape {
 
 
     public abstract void boundingBox(Graphics g);
-/*
-    public abstract void mouseClick(MouseEvent e);
-}*/
+
 }
